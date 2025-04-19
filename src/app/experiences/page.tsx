@@ -97,7 +97,7 @@ const experiencesAssociatives: Experience[] = [
   },
   {
     titre: 'Mission de soutien scolaire',
-    structure: 'AFEV',
+    structure: 'Association : AFEV',
     date: 'Janvier à Juin 2021',
     description: [
         'Accompagnement et soutien scolaire pour un enfant HPI et hyperactif'
