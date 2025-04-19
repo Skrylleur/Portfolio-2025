@@ -9,9 +9,7 @@ export default function AboutPage() {
 
       <p className="max-w-3xl text-lg md:text-xl text-gray-300 leading-relaxed">
         Étudiant en BTS Services Informatiques aux Organisations (SLAM), passionné par le développement web et mobile
-        ainsi que l’automatisation de processus. Je cherche une alternance pour mettre à profit mes compétences en
-        programmation web et mobile et développement d’outils dans le cadre d’une Licence STS développement applicatif
-        web et mobile.
+        ainsi que l’automatisation de processus.
       </p>
 
       <div className="mt-12 flex flex-col md:flex-row gap-4">
