@@ -52,7 +52,7 @@ const experiencesPro: Experience[] = [
     description: [
       "Conception et développement d'outils automatisés visant à optimiser les processus de l’entreprise.",
       "Prise en charge des incidents, du support téléphonique et physique auprès des utilisateurs.",
-      "Gestion et maintenance du parc informatique rédaction de documentation technique et fonctionnelle dans le cadre des projets menés.",
+      "Gestion et maintenance du parc informatique, rédaction de documentation technique et fonctionnelle dans le cadre des projets menés.",
       "Restructuration du site internet de l'entreprise et amélioration de son référencement naturel (SEO)."
     ]
   },
@@ -61,9 +61,9 @@ const experiencesPro: Experience[] = [
     structure: 'Laboratoires Urgo Healthcare, Chenôve',
     date: 'Septembre 2021 - Août 2023',
     description: [
-      "Gestion et surveillance des notes de frais des forces de vente, y compris l'approbation des dépenses, la vérification des justificatifs et la conformité aux politiques de l'entreprise.",
-      "Gestion du parc de cartes affaires, y compris la distribution et la gestion des dépenses associées.",
-      "Création de reportings réguliers pour le service commercial, en utilisant Excel pour automatiser les processus de collecte et d'analyse de données."
+      "Gestion et surveillance des notes de frais des forces de vente.",
+      "Gestion du parc de cartes affaires.",
+      "Création de reportings réguliers automatisés sous Excel."
     ]
   },
   {
@@ -71,43 +71,78 @@ const experiencesPro: Experience[] = [
     structure: 'Orazurn, Chevigny-Saint-Sauveur',
     date: 'Juin 2021 - Septembre 2021',
     description: [
-      "Préparation des aliments selon les normes de qualité en suivant les procédures établies pour chaque produit et en utilisant les équipements appropriés.",
-      "Maintien de la propreté et de l'hygiène de la cuisine et des équipements.",
-      "Suivi des instructions des superviseurs pour assurer le bon fonctionnement de la cuisine, y compris le suivi des commandes, la gestion des stocks et la préparation des commandes."
+      "Préparation des aliments selon les normes de qualité.",
+      "Maintien de la propreté et de l'hygiène.",
+      "Suivi des commandes et gestion des stocks."
+    ]
+  }
+]
+
+const experiencesAssociatives: Experience[] = [
+  {
+    titre: 'Mission de mentorat',
+    structure: 'Association : Dema1n.org',
+    date: '2023 - 2025',
+    description: [
+      "Accompagnement et conseil de jeunes étudiants dans leur première recherche d'école ou d'alternance."
+    ]
+  },
+  {
+    titre: 'Tenu d\'un stand d\'école au salon de l\'étudiant',
+    structure: 'Edition 2024 du salon de l\'étudiant de Caen',
+    date: 'Décembre 2024',
+    description: [
+      'Conseil et accueil de jeunes étudiants en recherche d\'une formation scolaire.'
+    ]
+  },
+  {
+    titre: 'Mission de soutien scolaire',
+    structure: 'AFEV',
+    date: 'Janvier à Juin 2021',
+    description: [
+        'Accompagnement et soutien scolaire pour un enfant HPI et hyperactif'
+    ]
+  },
+  {
+    titre: 'Organisation d\'une collecte de nourriture au profit des Restos du cœur',
+    structure: 'Restos du cœur',
+    date: 'Novembre 2019',
+    description: [
+        'Organisation d\'une récolte de produits secs et alimentaires au profit de l\'association',
+        'Intervention auprès des classes pour inviter les élèves de l\'établissement à faire un don.',
+        'Tenue d’un stand pour faciliter la collecte des dons auprès des étudiants.'
     ]
   }
 ]
 
 export default function ExperiencePage() {
-  const [type, setType] = useState<'scolaire' | 'professionnelle'>('scolaire')
+  const [type, setType] = useState<'scolaire' | 'professionnelle' | 'associative'>('scolaire')
 
-  const experiences = type === 'scolaire' ? experiencesScolaires : experiencesPro
+  const experiences =
+    type === 'scolaire'
+      ? experiencesScolaires
+      : type === 'professionnelle'
+      ? experiencesPro
+      : experiencesAssociatives
 
   return (
     <main className="min-h-screen px-6 py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white">
       <h1 className="text-4xl md:text-6xl font-bold text-center mb-10">Expériences</h1>
 
-      <div className="flex justify-center gap-6 mb-12">
-        <button
-          onClick={() => setType('scolaire')}
-          className={`px-6 py-2 rounded-full text-sm md:text-base transition duration-300 border ${
-            type === 'scolaire'
-              ? 'bg-cyan-400 text-black'
-              : 'border-gray-600 hover:bg-gray-800'
-          }`}
-        >
-          Scolaire
-        </button>
-        <button
-          onClick={() => setType('professionnelle')}
-          className={`px-6 py-2 rounded-full text-sm md:text-base transition duration-300 border ${
-            type === 'professionnelle'
-              ? 'bg-cyan-400 text-black'
-              : 'border-gray-600 hover:bg-gray-800'
-          }`}
-        >
-          Professionnelle
-        </button>
+      <div className="flex justify-center flex-wrap gap-4 md:gap-6 mb-12">
+        {['scolaire', 'professionnelle', 'associative'].map((category) => (
+          <button
+            key={category}
+            onClick={() => setType(category as typeof type)}
+            className={`px-6 py-2 rounded-full text-sm md:text-base transition duration-300 border ${
+              type === category
+                ? 'bg-cyan-400 text-black'
+                : 'border-gray-600 hover:bg-gray-800'
+            }`}
+          >
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </button>
+        ))}
       </div>
 
       <div className="space-y-8 max-w-4xl mx-auto">
