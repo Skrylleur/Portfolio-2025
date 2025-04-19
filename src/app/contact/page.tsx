@@ -30,8 +30,7 @@ export default function ContactPage() {
       } else {
         alert('Erreur : ' + result.message || 'Une erreur est survenue.')
       }
-    } catch (error) {
-      alert('Une erreur réseau est survenue.')
+    } catch {
     }
   }
 
