@@ -18,24 +18,28 @@ const projects = [
     place: 'Projet personnel',
     description: 'Création d’un portfolio moderne avec responsive design et navigation fluide.',
     skills: ['Travail en mode projet', 'Organisation de son développement professionnel'],
-    link: 'https://exemple.com/portfolio',
-    image: '/images/portfolio.png', // Ajoute l'image dans public/images/
+  },
+  {
+    title: "Conception d'un Portfolio en Astro",
+    place: 'Projet personnel',
+    description: 'Création d’un portfolio moderne avec responsive design et navigation fluide.',
+    skills: ['Travail en mode projet', 'Organisation de son développement professionnel'],
+    link: 'https://portfolio-clement-papillon.netlify.app',
   },
   {
     title: "Conception d'une API Spring Boot",
     place: 'Projet scolaire',
     description: 'Développement d’une API REST pour un système de gestion locative.',
     skills: ['Travail en mode projet'],
-    link: 'https://exemple.com/api',
-    image: '/images/api.png',
+    link: 'https://github.com/Skrylleur/API_Azurimmo',
+    image: '/images/Base_de_donnees.png',
   },
   {
     title: 'Application mobile de gestion locative',
     place: 'Projet scolaire',
     description: 'Application Android native en Kotlin connectée à une API Spring Boot.',
     skills: ['Travail en mode projet'],
-    link: 'https://exemple.com/mobile',
-    image: '',
+    link: 'https://github.com/Skrylleur/Azurimmo',
   },
   {
     title: 'Automatisation de 150 fichiers Excel',
@@ -46,11 +50,11 @@ const projects = [
     image: '',
   },
   {
-    title: 'SEO & refonte du site AEC',
+    title: 'SEO & refonte du site des cabinets Chemin',
     place: 'Projet en entreprise',
-    description: 'Audit, optimisation SEO et restructuration du site du cabinet AEC.',
+    description: 'Audit, optimisation SEO et restructuration du site des cabinets Chemin.',
     skills: ['Développement de la présence en ligne de l’organisation'],
-    link: '',
+    link: 'https://cabinet-chemin.fr',
     image: '',
   },
   {
@@ -72,7 +76,7 @@ const projects = [
       'Mise à disposition des utilisateurs d’un service informatique',
       'Travail en mode projet',
     ],
-    link: 'https://exemple.com/migration',
+    link: '',
     image: '',
   },
 ]
