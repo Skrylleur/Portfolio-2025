@@ -127,7 +127,7 @@ export default function ExperiencePage() {
 
   return (
     <main className="min-h-screen px-6 py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white">
-      <h1 className="text-4xl md:text-6xl font-bold text-center mb-10">Expériences</h1>
+      <h1 className="text-4xl md:text-6xl font-bold text-center mb-10">Mes expériences</h1>
 
       <div className="flex justify-center flex-wrap gap-4 md:gap-6 mb-12">
         {['scolaire', 'professionnelle', 'associative'].map((category) => (
