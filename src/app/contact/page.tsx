@@ -9,11 +9,30 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Envoi à une API / email service plus tard
-    alert('Message envoyé (simulation) !')
-    setFormData({ name: '', email: '', message: '' })
+  
+    try {
+      const response = await fetch('https://formspree.io/f/mwpljbgd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+  
+      const result = await response.json()
+  
+      if (response.ok) {
+        alert('Message envoyé avec succès !')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        alert('Erreur : ' + result.message || 'Une erreur est survenue.')
+      }
+    } catch (error) {
+      alert('Une erreur réseau est survenue.')
+    }
   }
 
   return (
