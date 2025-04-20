@@ -80,6 +80,16 @@ const projects = [
     link: '',
     image: '',
   },
+  {
+    title: 'Installation d\'un nouveau logiciel et formation des collaborateurs',
+    place: 'Projet en entreprise',
+    description: 'Création d’un outil pour migrer automatiquement les dossiers clients.',
+    skills: [
+      'Mise à disposition des utilisateurs d’un service informatique',
+    ],
+    link: '',
+    image: '/images/Formation.png'
+  },
 ]
 
 export default function ProjectsPage() {
@@ -117,12 +127,12 @@ export default function ProjectsPage() {
 
             {project.image && (
               <div className="relative mt-4 overflow-hidden rounded-lg border border-gray-700 max-h-64">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full object-cover"
-                />
-                <ImageModal src={project.image} alt={project.title} />
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-64 object-cover object-center mx-auto"
+              />                
+              <ImageModal src={project.image} alt={project.title} />
               </div>
             )}
 
