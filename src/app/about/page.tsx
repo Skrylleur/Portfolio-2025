@@ -36,6 +36,15 @@ export default function AboutPage() {
         >
           Lettre de recommandation
         </a>
+
+        <a
+          href="/documents/Veille technologique.pdf"
+          download
+          className="px-6 py-3 border border-white rounded-full text-white hover:bg-white hover:text-black transition duration-300"
+        >
+          Ma veille technologique
+        </a>
+
       </div>
 
       <div className="mt-20">
