@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center flex-col px-6 py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white text-center">
+    <main className="min-h-screen flex items-center justify-center flex-col px-6 py-20 bg-gradient-to-b from-slate-800 via-gray-900 to-gray-800 text-white text-center">
       <h1 className="text-4xl md:text-6xl font-bold mb-6">À propos</h1>
 
       <p className="max-w-3xl text-lg md:text-xl text-gray-300 leading-relaxed">

@@ -2,7 +2,7 @@
 
 export default function SkillsPage() {
   return (
-    <main className="min-h-screen px-6 py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white flex flex-col items-center text-center">
+    <main className="min-h-screen px-6 py-20 bg-gradient-to-b from-slate-800 via-gray-900 to-gray-800bg-gradient-to-b from-slate-800 via-gray-900 to-gray-800 text-white flex flex-col items-center text-center">
       <h1 className="text-4xl md:text-6xl font-bold mb-6">Compétences</h1>
 
       <div className="max-w-4xl w-full grid md:grid-cols-2 gap-10 text-left">

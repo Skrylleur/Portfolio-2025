@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-950 to-gray-900 text-white flex items-center justify-center">
+    <main className="min-h-screen bg-gradient-to-b from-slate-800 via-gray-900 to-gray-800 text-white flex items-center justify-center">
       <motion.div
         className="text-center"
         initial={{ opacity: 0, y: 40 }}
@@ -28,7 +28,7 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.7, ease: 'easeOut' }}
         >
           Bonjour, bienvenue sur mon portfolio.
-          </motion.p>
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0 }}

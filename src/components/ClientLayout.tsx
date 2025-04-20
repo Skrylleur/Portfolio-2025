@@ -2,15 +2,17 @@
 
 import { usePathname } from 'next/navigation'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
-  const showNavbar = pathname !== '/'
+  const showNavAndFooter = pathname !== '/'
 
   return (
     <>
-      {showNavbar && <Navbar />}
+      {showNavAndFooter && <Navbar />}
       {children}
+      {showNavAndFooter && <Footer />}
     </>
   )
 }

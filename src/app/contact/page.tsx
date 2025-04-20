@@ -4,7 +4,7 @@ import {Linkedin } from 'lucide-react'
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen px-6 py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white flex flex-col items-center justify-center">
+    <main className="min-h-screen px-6 py-20 bg-gradient-to-b from-slate-800 via-gray-900 to-gray-800 text-white flex flex-col items-center justify-center">
       {/* Formulaire de contact */}
       <div className="w-full max-w-2xl bg-gray-800/60 p-8 rounded-2xl shadow-md">
         <h1 className="text-4xl font-bold mb-8 text-center">Contact</h1>

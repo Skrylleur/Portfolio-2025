@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import SkillFilter from '@/components/SkillFilter'
+import ImageModal from '@/components/ImageModal'
 
 const allSkills = [
   'Travail en mode projet',
@@ -89,17 +90,15 @@ export default function ProjectsPage() {
     : projects
 
   return (
-    <main className="min-h-screen px-6 py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white">
+    <main className="min-h-screen px-6 py-20 bg-gradient-to-b from-slate-800 via-gray-900 to-gray-800 text-white">
       <h1 className="text-4xl md:text-6xl font-bold text-center mb-10">Mes projets</h1>
 
-      {/* Barre de filtre moderne */}
       <SkillFilter
         selectedSkill={selectedSkill}
         onChange={setSelectedSkill}
         allSkills={allSkills}
       />
 
-      {/* Liste des projets */}
       <div className="space-y-8 max-w-4xl mx-auto">
         {filteredProjects.map((project, idx) => (
           <div
@@ -117,11 +116,14 @@ export default function ProjectsPage() {
             </ul>
 
             {project.image && (
-              <img
-                src={project.image}
-                alt={project.title}
-                className="mt-4 rounded-lg w-full object-cover max-h-64 border border-gray-700"
-              />
+              <div className="relative mt-4 overflow-hidden rounded-lg border border-gray-700 max-h-64">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full object-cover"
+                />
+                <ImageModal src={project.image} alt={project.title} />
+              </div>
             )}
 
             {project.link && (
