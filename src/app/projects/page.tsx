@@ -15,10 +15,11 @@ const allSkills = [
 
 const projects = [
   {
-    title: "Conception d'un Portfolio en Next.js",
-    place: 'Projet personnel',
-    description: 'Création d’un portfolio moderne avec responsive design et navigation fluide. Il s\'agit du portfolio sur lequel vous voius trouvez actuellement.',
+    title: "Conception de deux Portfolios en Next.js",
+    place: 'Projets personnel',
+    description: 'Création de portfolios modernes avec responsive design et navigation fluide. Il s\'agit du portfolio sur lequel vous vous trouvez actuellement ainsi que d\'un second portfolio que vous trouverez ci-dessous.',
     skills: ['Travail en mode projet', 'Organisation de son développement professionnel'],
+    link: 'https://mateo-legigan.netlify.app',
   },
   {
     title: "Conception d'un Portfolio en Astro",
