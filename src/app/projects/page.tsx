@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Conception d'un Portfolio en Next.js",
     place: 'Projet personnel',
-    description: 'Création d’un portfolio moderne avec responsive design et navigation fluide.',
+    description: 'Création d’un portfolio moderne avec responsive design et navigation fluide. Il s\'agit du portfolio sur lequel vous voius trouvez actuellement.',
     skills: ['Travail en mode projet', 'Organisation de son développement professionnel'],
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     description: 'Scripts VBA pour automatiser la production d’écritures comptables.',
     skills: ['Mise à disposition des utilisateurs d’un service informatique'],
     link: '',
-    image: '',
+    image: '/images/Code_VBA.png',
   },
   {
     title: 'SEO & refonte du site des cabinets Chemin',
@@ -67,18 +67,18 @@ const projects = [
       'Réponse aux incidents et aux demandes d’assistance et d’évolution',
     ],
     link: '',
-    image: '',
+    image: '/images/Gestion_parc_info.png',
   },
   {
     title: 'Migration de dossiers clients',
     place: 'Projet en entreprise',
-    description: 'Création d’un outil pour migrer automatiquement les dossiers clients.',
+    description: 'Création d’un outil pour migrer automatiquement les dossiers clients. Il s\'agit de documents confidentiel, l\'image de preuve n\'est donc pas un extrait du dit projet mais d\'un exemple pour imager le projet.',
     skills: [
       'Mise à disposition des utilisateurs d’un service informatique',
       'Travail en mode projet',
     ],
     link: '',
-    image: '',
+    image: '/images/Code_VBA.png',
   },
   {
     title: 'Installation d\'un nouveau logiciel et formation des collaborateurs',
