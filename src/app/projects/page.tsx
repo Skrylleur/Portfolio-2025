@@ -15,18 +15,21 @@ const allSkills = [
 
 const projects = [
   {
-    title: "Conception de deux Portfolios en Next.js",
+    title: "Conception de trois Portfolios en Next.js",
     place: 'Projets personnel',
-    description: 'Création de portfolios modernes avec responsive design et navigation fluide. Il s\'agit du portfolio sur lequel vous vous trouvez actuellement ainsi que d\'un second portfolio que vous trouverez ci-dessous.',
+    description: 'Création de portfolios modernes avec responsive design et navigation fluide. Il s\'agit du portfolio sur lequel vous vous trouvez actuellement ainsi que de deux autres portfolios que vous trouverez ci-dessous.',
     skills: ['Travail en mode projet', 'Organisation de son développement professionnel'],
-    link: 'https://mateo-legigan.netlify.app',
+    links: [
+      { label: "Portfolio numéro 1", url: "https://mateo-legigan.netlify.app" },
+      { label: "Portfolio numéro 2", url: "https://portfolio-clement-papillon.netlify.app" }
+    ],  
   },
   {
     title: "Conception d'un Portfolio en Astro",
     place: 'Projet personnel',
     description: 'Création d’un portfolio moderne avec responsive design et navigation fluide.',
     skills: ['Travail en mode projet', 'Organisation de son développement professionnel'],
-    link: 'https://portfolio-clement-papillon.netlify.app',
+    image: '/images/Portfolio.png',
   },
   {
     title: "Conception d'une API Spring Boot",
@@ -34,6 +37,9 @@ const projects = [
     description: 'Développement d’une API REST pour un système de gestion locative.',
     skills: ['Travail en mode projet'],
     link: 'https://github.com/Skrylleur/API_Azurimmo',
+    links: [
+      { label: "Lien du Github", url: "https://github.com/Skrylleur/API_Azurimmo" },
+    ],  
     image: '/images/Base_de_donnees.png',
   },
   {
@@ -41,7 +47,10 @@ const projects = [
     place: 'Projet scolaire',
     description: 'Application Android native en Kotlin connectée à une API Spring Boot.',
     skills: ['Travail en mode projet'],
-    link: 'https://github.com/Skrylleur/Azurimmo',
+    links: [
+      { label: "Lien du Github", url: "https://github.com/Skrylleur/API_Azurimmo" },
+    ],  
+    image: '/images/AzurImmo.png',
   },
   {
     title: 'Automatisation de 150 fichiers Excel',
@@ -56,7 +65,9 @@ const projects = [
     place: 'Projet en entreprise',
     description: 'Audit, optimisation SEO et restructuration du site des cabinets Chemin.',
     skills: ['Développement de la présence en ligne de l’organisation'],
-    link: 'https://cabinet-chemin.fr',
+    links: [
+      { label: "Lien du site du cabinet Chemin", url: "https://cabinet-chemin.fr" },
+    ],  
     image: '',
   },
   {
@@ -137,17 +148,22 @@ export default function ProjectsPage() {
               </div>
             )}
 
-            {project.link && (
+        {project.links && project.links.length > 0 && (
+          <div className="mt-4 space-y-1">
+            {project.links.map((link, i) => (
               <a
-                href={project.link}
+                key={i}
+                href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 text-cyan-400 hover:underline text-sm"
+                className="block text-cyan-400 hover:underline text-sm"
               >
-                Voir le projet
+                {link.label}
               </a>
-            )}
+            ))}
           </div>
+        )}          
+        </div>
         ))}
       </div>
     </main>
