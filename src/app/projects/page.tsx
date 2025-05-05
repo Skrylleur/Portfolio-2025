@@ -66,7 +66,7 @@ const projects = [
     description: 'Audit, optimisation SEO et restructuration du site des cabinets Chemin.',
     skills: ['Développement de la présence en ligne de l’organisation'],
     links: [
-      { label: "Lien du site du cabinet Chemin", url: "https://cabinet-chemin.fr" },
+      { label: "Lien du site des cabinets Chemin", url: "https://cabinet-chemin.fr" },
     ],  
     image: '',
   },

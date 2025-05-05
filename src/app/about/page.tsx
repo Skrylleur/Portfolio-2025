@@ -21,21 +21,21 @@ export default function AboutPage() {
           Télécharger mon CV
         </a>
 
-        <a
+        {/* <a
           href="/documents/Lettre_de_Motivation.pdf"
           download
           className="px-6 py-3 border border-white rounded-full text-white hover:bg-white hover:text-black transition duration-300"
         >
           Lettre de motivation
-        </a>
+        </a> */}
 
-        <a
+        {/* <a
           href="/documents/Lettre de recommandation - Nicole MAUGER.pdf"
           download
           className="px-6 py-3 border border-white rounded-full text-white hover:bg-white hover:text-black transition duration-300"
         >
           Lettre de recommandation
-        </a>
+        </a> */}
 
         <a
           href="/documents/Veille technologique.pdf"
@@ -43,6 +43,22 @@ export default function AboutPage() {
           className="px-6 py-3 border border-white rounded-full text-white hover:bg-white hover:text-black transition duration-300"
         >
           Ma veille technologique
+        </a>
+
+        <a
+          href="/documents/Veille juridique.pdf"
+          download
+          className="px-6 py-3 border border-white rounded-full text-white hover:bg-white hover:text-black transition duration-300"
+        >
+          Ma veille juridique
+        </a>
+
+        <a
+          href="/documents/Antonin GOURINCHAS - Tableau de synthèse.pdf"
+          download
+          className="px-6 py-3 border border-white rounded-full text-white hover:bg-white hover:text-black transition duration-300"
+        >
+          Mon tableau de synthèse
         </a>
 
       </div>
