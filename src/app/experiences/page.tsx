@@ -80,6 +80,14 @@ const experiencesPro: Experience[] = [
 
 const experiencesAssociatives: Experience[] = [
   {
+    titre: 'Parade opératique du millénaire de Caen',
+    structure: 'Millénaire de Caen',
+    date: '9 mai 2025',
+    description: [
+      "Gestion des flux, conseil et accompagnement de spectateurs."
+    ]
+  },
+  {
     titre: 'Mission de mentorat',
     structure: 'Association : Dema1n.org',
     date: '2023 - 2025',
