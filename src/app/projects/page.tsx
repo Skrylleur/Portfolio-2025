@@ -15,6 +15,25 @@ const allSkills = [
 
 const projects = [
   {
+    title: "Citation Master",
+    place: 'Projet personnel',
+    descritpion: "CitationMaster est une application web moderne permettant de gérer une base de citations inspirantes, drôles ou philosophiques. Elle est conçue avec Next.js 15, Prisma et Tailwind CSS, et propose une interface simple pour ajouter, modifier, supprimer ou partager des citations.",
+    skills: ['Travail en mode projet', 'Organisation de son développement professionnel'],
+    links: [
+      { label: "Le repository du projet", url: "https://github.com/Skrylleur/CitationMaster" },
+    ],  
+  },
+  {
+    title: "Midi Match",
+    place: "Projet personnel",
+    description: "Midi-Match est une application simple et ludique qui vous aide à répondre à la fameuse question : “On mange quoi ce midi ?“ En un clic, l’application sélectionne aléatoirement un repas parmi une liste personnalisable de suggestions. Que ce soit pour manger rapidement, varier les plaisirs ou éviter les éternelles hésitations, Midi-Match est là pour vous inspirer au quotidien.",
+    skills: ['Travail en mode projet', 'Organisation de son développement professionnel'],
+    links: [
+      { label: "Le projet", url: "https://glistening-kulfi-a2a262.netlify.app" },
+      { label: "Le repository du projet", url: "https://github.com/Skrylleur/Midi-match" }
+    ],  
+  },
+  {
     title: "Conception de trois Portfolios en Next.js",
     place: 'Projets personnel',
     description: 'Création de portfolios modernes avec responsive design et navigation fluide. Il s\'agit du portfolio sur lequel vous vous trouvez actuellement ainsi que de deux autres portfolios que vous trouverez ci-dessous.',
