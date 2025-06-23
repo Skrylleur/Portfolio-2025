@@ -1,5 +1,5 @@
 // app/components/Footer.tsx
-import { Linkedin, Github, Mail, ArrowUp } from 'lucide-react'
+import { Linkedin, Github, ArrowUp } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Footer() {
