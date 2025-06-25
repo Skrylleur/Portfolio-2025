@@ -75,28 +75,59 @@ export default function Home() {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col gap-4 justify-center items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <Link href="/about">
-              <button className="group px-8 py-3 text-lg border border-cyan-400 rounded-full text-cyan-300 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center gap-2">
-                Me découvrir
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </Link>
-            <Link href="/contact">
-              <button className="px-8 py-3 text-lg bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full text-white hover:from-cyan-300 hover:to-blue-400 transition-all duration-300">
-                Me contacter
-              </button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
+              <Link href="/about">
+                <button className="group px-8 py-3 text-lg border border-cyan-400 rounded-full text-cyan-300 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center gap-2">
+                  Me découvrir
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="px-8 py-3 text-lg bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full text-white hover:from-cyan-300 hover:to-blue-400 transition-all duration-300">
+                  Me contacter
+                </button>
+              </Link>
+            </div>
+            {/* Scroll Down Indicator sous les boutons */}
+            <div className="w-full flex flex-col items-center">
+              <motion.div
+                className="mt-20 animate-bounce"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1.2 }}
+              >
+                <motion.button
+                  type="button"
+                  aria-label="Faire défiler vers la suite"
+                  className="focus:outline-none"
+                  whileTap={{ scale: 1.2, boxShadow: '0 0 16px #22d3ee' }}
+                  onClick={() => {
+                    const section = document.getElementById('quick-nav');
+                    if (section) {
+                      section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  <span className="text-cyan-400">
+                    <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="mx-auto animate-bounce">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </motion.button>
+              </motion.div>
+              <span className="mt-2 text-sm text-gray-400">Faites défiler pour découvrir</span>
+            </div>
           </motion.div>
         </motion.div>
       </section>
 
       {/* Quick Navigation Section */}
-      <section className="py-20 px-6">
+      <section id="quick-nav" className="py-20 px-6">
         <motion.div
           className="max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
